@@ -1,0 +1,97 @@
+
+.container{
+    background-color: black;
+    top: 0;
+    left: 0;
+}
+
+.container2{
+    /* text-align: center; */
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+hr{
+    width: 98%;
+}
+
+.p1{
+    color:aqua;
+    font-size: 30px;
+    margin-top: 3%;
+    text-shadow: 2px 2px 5px aqua;
+
+}
+.boxes{
+    display: flex;
+    width: 100%;
+    height:500px;
+    justify-content: space-around;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color:aquamarine;
+    border-radius: 0px 50% 0px 50%;
+    box-shadow: 8px 8px 10px white;
+    margin: auto;
+    
+}
+.box:hover{
+    animation-name: yakuza;
+    animation-duration: 4s;
+    cursor: pointer;
+   /* animation-iteration-count: 0; */
+}
+@keyframes yakuza {
+    0%{
+        transform: rotateZ(0);
+    }
+    25%{
+        transform: rotateZ(360deg);
+    }
+    50%{
+        transform: rotateZ(-360deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
+
+
+
+
+@media (min-width:300px) and (max-width:700px){
+    .boxes{
+    flex-direction: column;
+    height: 800px;
+    /* align-items: center; */
+    
+    }
+    .box{
+        margin: 5%;
+        animation-name: yakuza1;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        position: relative;
+    }
+    
+   @keyframes yakuza1 {
+    from{ 
+        left: 0;
+    }
+    to{
+        left: 100px;
+    }
+   }
+
+}
+.box:hover{
+    animation-name: yakuza;
+    animation-duration: 5s;
+    cursor: pointer;
+}
